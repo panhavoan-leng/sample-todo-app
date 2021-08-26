@@ -5,6 +5,8 @@ from rest_framework.response import Response
 from rest_framework import generics
 from rest_framework import mixins
 from rest_framework import viewsets
+from rest_framework import filters
+from django_filters.rest_framework import DjangoFilterBackend
 from .serializers import TodoSerializer
 from .models import Todo
 
@@ -20,6 +22,9 @@ class TodoView(
 ):
 
     queryset = Todo.objects.all()
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+    filterset_fields = ["is_completed"]
+    search_fields = ["title"]
     serializer_class = TodoSerializer
     lookup_field = "id"
 

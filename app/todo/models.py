@@ -10,3 +10,6 @@ class Todo(models.Model):
     is_completed = models.BooleanField(blank=False, null=False, default=False)
     created_at = models.DateTimeField("Created Datetime", blank=True, auto_now_add=True)
     updated_at = models.DateTimeField("Updated Datetime", blank=True, auto_now=True)
+
+    def __str__(self) -> str:
+        return self.title
