@@ -38,6 +38,8 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    # To allow CORS (Cross-origin resource sharing)
+    "corsheaders",
     "rest_framework",
     "django_filters",
     "django.contrib.admin",
@@ -50,6 +52,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    # To allow CORS (Cross-origin resource sharing)
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
