@@ -26,7 +26,12 @@ SECRET_KEY = "django-insecure-@j+vduq9ialado6h(qek+rbb_@w#g$hmg3v(=9+cy@@d42g7^*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://guarded-sierra-97092.herokuapp.com", "127.0.0.1", "guarded-sierra-97092.herokuapp.com"]
+ALLOWED_HOSTS = [
+    "https://guarded-sierra-97092.herokuapp.com",
+    "127.0.0.1",
+    "guarded-sierra-97092.herokuapp.com",
+    "localhost",
+]
 
 
 # Application definition
@@ -75,7 +80,17 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "config.wsgi.application"
-
+# Heroku Database
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "d8m1jrvbhn1q8f",
+#         "USER": "kqlnxqvldunhtj",
+#         "PORT": 5432,
+#         "HOST": "ec2-18-214-238-28.compute-1.amazonaws.com",
+#         "PASSWORD": "497c3676ea2bb543f24ab8734d770b5220373dfba5c39fdf61e81334730fef3e",
+#     }
+# }
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
