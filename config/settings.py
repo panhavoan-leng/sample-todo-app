@@ -81,26 +81,26 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 # Heroku Database
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": "d8m1jrvbhn1q8f",
-#         "USER": "kqlnxqvldunhtj",
-#         "PORT": 5432,
-#         "HOST": "ec2-18-214-238-28.compute-1.amazonaws.com",
-#         "PASSWORD": "497c3676ea2bb543f24ab8734d770b5220373dfba5c39fdf61e81334730fef3e",
-#     }
-# }
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "d8m1jrvbhn1q8f",
+        "USER": "kqlnxqvldunhtj",
+        "PORT": 5432,
+        "HOST": "ec2-18-214-238-28.compute-1.amazonaws.com",
+        "PASSWORD": "497c3676ea2bb543f24ab8734d770b5220373dfba5c39fdf61e81334730fef3e",
+    }
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
 
 
 # Password validation
